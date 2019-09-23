@@ -1,5 +1,8 @@
-<div>
-  <ul>
-    <li *ngFor="let zip of zipCodes">{{zip}}</li>
-  </ul>
+<div *ngFor="let zip of zipCodes" class="well flex">
+  <div>
+    <h3>{{zip}}</h3>
+  </div>
+  <div>
+    <span class="close">&times;</span>
+  </div>
 </div>
