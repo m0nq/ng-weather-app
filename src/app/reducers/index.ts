@@ -1,4 +1,4 @@
-import { ActionReducerMap, MetaReducer } from '@ngrx/store';
+import { ActionReducerMap, createSelector, MetaReducer } from '@ngrx/store';
 import { environment } from '../../environments/environment';
 import { zipCodeReducer, ZipCodeState } from './zip-codes.reducer';
 import { currentConditionsReducer, CurrentConditionsState } from './current-conditions.reducer';
@@ -14,3 +14,7 @@ export const reducers: ActionReducerMap<State> = {
 };
 
 export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
+
+export const selectZipCodeState = (state: State) => state.zipCodes;
+
+export const selectZipCodeList = createSelector(selectZipCodeState, (state: ZipCodeState) => state.zipCodes);

@@ -1,7 +1,7 @@
 import { CurrentConditionsActions, CurrentConditionsActionTypes } from '../actions/current-conditions.actions';
 
 export interface CurrentConditionsState {
-  currentConditions: Map<string, any>;
+  currentConditions: Map<String, any>;
 }
 
 export const initialState: CurrentConditionsState = {

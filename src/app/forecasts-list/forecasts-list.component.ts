@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ForecastsListComponent {
 
-  zipCode: string;
+  zipCode: String;
   forecast: any;
 
   constructor(private weatherService: WeatherService, route: ActivatedRoute) {

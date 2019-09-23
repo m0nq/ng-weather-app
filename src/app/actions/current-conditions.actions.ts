@@ -8,13 +8,13 @@ export enum CurrentConditionsActionTypes {
 export class CurrentConditionsLoaded implements Action {
   readonly type = CurrentConditionsActionTypes.CurrentConditionsLoaded;
 
-  constructor(public zipCode: string, public conditions: any) {}
+  constructor(public zipCode: String, public conditions: any) {}
 }
 
 export class CurrentConditionsLoadFailed implements Action {
   readonly type = CurrentConditionsActionTypes.CurrentConditionsLoadFailed;
 
-  constructor(public zipCode: string, public error: any) {}
+  constructor(public zipCode: String, public error: any) {}
 }
 
 export type CurrentConditionsActions = CurrentConditionsLoaded | CurrentConditionsLoadFailed;

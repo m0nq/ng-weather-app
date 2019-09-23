@@ -13,13 +13,13 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  loadCurrentConditions(zipCode: string): Observable<any> {
+  loadCurrentConditions(zipCode: String): Observable<any> {
     // tslint:disable-next-line:max-line-length
     // Here we make a request to get the current conditions data from the API. Note the use of backticks and an expression to insert the zipCode
     return this.http.get(`${ WeatherService.URL }/weather?zip=${ zipCode },us&units=imperial&APPID=${ WeatherService.APPID }`);
   }
 
-  removeCurrentConditions(zipCode: string) {
+  removeCurrentConditions(zipCode: String) {
     for (let i in this.currentConditions) {
       if (this.currentConditions[i].zip === zipCode) {
         this.currentConditions.splice(+i, 1);
@@ -31,7 +31,7 @@ export class WeatherService {
     return this.currentConditions;
   }
 
-  getForecast(zipCode: string): Observable<any> {
+  getForecast(zipCode: String): Observable<any> {
     // Here we make a request to get the forecast data from the API. Note the use of backticks and an expression to insert the zipCode
     return this.http.get(`${ WeatherService.URL }/forecast/daily?zip=${ zipCode },us&units=imperial&cnt=5&APPID=${ WeatherService.APPID }`);
 

@@ -11,7 +11,7 @@ export class ZipCodeEntryComponent {
 
   constructor(private store: Store<State>) { }
 
-  addLocation(zipCode: string) {
+  addLocation(zipCode: String) {
     this.store.dispatch(new AddZipCode(zipCode));
   }
 }

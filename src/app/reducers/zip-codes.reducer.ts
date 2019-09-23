@@ -1,7 +1,7 @@
 import { ZipCodeActions, ZipCodeActionTypes } from '../actions/zip-code.actions';
 
 export interface ZipCodeState {
-  zipCodes: Array<string>
+  zipCodes: Array<String>
 }
 
 export const initialState: ZipCodeState = {
